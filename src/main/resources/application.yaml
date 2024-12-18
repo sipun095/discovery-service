@@ -1,0 +1,18 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: discovery-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    enableSelfPreservation: false  # Optional: Disable self-preservation mode
+    #evictionIntervalTimerInMs: 5000 # Optional: Set eviction interval for stale instances
